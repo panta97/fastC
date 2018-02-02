@@ -20,7 +20,7 @@
               <h2 class="panel-title">Cuadre</h2>
             </div>
             <div class="col col-xs-6 text-right">
-              <button type="button" class="btn btn-sm btn-primary btn-create">Create New</button>
+              <button type="button" class="btn btn-sm btn-primary btn-create" (click)="clearAll()">Borrar Todo</button>
             </div>
           </div>
         </div>
@@ -28,33 +28,152 @@
           <table class="table table-striped table-bordered table-list">
             <thead>
               <tr>
-                <th style="width: 10%">Denominacion</th>
-                <th style="width: 30%; ">Unidad</th>
-                <th>Monto</th>
+                <th style="width: 10%">
+                  <h2>
+                    Denominacion
+                  </h2>
+                </th>
+                <th style="width: 30%; ">
+                  <h2>
+                    Unidad
+                  </h2>
+                </th>
+                <th>
+                  <h2>
+                    Monto
+                  </h2>
+                </th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>
-                  <h3 class="dn">0.1</h3>
+                  <h3 class="dn">{{ denom.diez }}</h3>
                 </td>
                 <td>
-                  <input [(ngModel)]="centimos" type="text" class="form-control" (keyup)="calcular()">
+                  <input [(ngModel)]="unidad.diez" type="text" class="form-control" (keyup)="calcular(denom.diez, unidad.diez)">
                 </td>
                 <td>
                   <h3 class="dn">
-                    {{result}}
+                    {{monto['0.1']}}
                   </h3>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <h3 class="dn">0.1</h3>
+                  <h3 class="dn">{{ denom.vein }}</h3>
                 </td>
                 <td>
-                  <input type="text" class="form-control">
+                  <input [(ngModel)]="unidad.vein" type="text" class="form-control" (keyup)="calcular(denom.vein, unidad.vein)">
                 </td>
-                <td>...
+                <td>
+                  <h3 class="dn">
+                    {{monto['0.2']}}
+                  </h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h3 class="dn">{{ denom.unso }}</h3>
+                </td>
+                <td>
+                  <input [(ngModel)]="unidad.unso" type="text" class="form-control" (keyup)="calcular(denom.unso, unidad.unso)">
+                </td>
+                <td>
+                  <h3 class="dn">
+                    {{monto['1']}}
+                  </h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h3 class="dn">{{ denom.doso }}</h3>
+                </td>
+                <td>
+                  <input [(ngModel)]="unidad.doso" type="text" class="form-control" (keyup)="calcular(denom.doso, unidad.doso)">
+                </td>
+                <td>
+                  <h3 class="dn">
+                    {{monto['2']}}
+                  </h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h3 class="dn">{{ denom.cinco }}</h3>
+                </td>
+                <td>
+                  <input [(ngModel)]="unidad.cinco" type="text" class="form-control" (keyup)="calcular(denom.cinco, unidad.cinco)">
+                </td>
+                <td>
+                  <h3 class="dn">
+                    {{monto['5']}}
+                  </h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h3 class="dn">{{ denom.diezso }}</h3>
+                </td>
+                <td>
+                  <input [(ngModel)]="unidad.diezso" type="text" class="form-control" (keyup)="calcular(denom.diezso, unidad.diezso)">
+                </td>
+                <td>
+                  <h3 class="dn">
+                    {{monto['10']}}
+                  </h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h3 class="dn">{{ denom.veinso }}</h3>
+                </td>
+                <td>
+                  <input [(ngModel)]="unidad.veinso" type="text" class="form-control" (keyup)="calcular(denom.veinso, unidad.veinso)">
+                </td>
+                <td>
+                  <h3 class="dn">
+                    {{monto['20']}}
+                  </h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h3 class="dn">{{ denom.cincuso }}</h3>
+                </td>
+                <td>
+                  <input [(ngModel)]="unidad.cincuso" type="text" class="form-control" (keyup)="calcular(denom.cincuso, unidad.cincuso)">
+                </td>
+                <td>
+                  <h3 class="dn">
+                    {{monto['50']}}
+                  </h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h3 class="dn">{{ denom.cienso }}</h3>
+                </td>
+                <td>
+                  <input [(ngModel)]="unidad.cienso" type="text" class="form-control" (keyup)="calcular(denom.cienso, unidad.cienso)">
+                </td>
+                <td>
+                  <h3 class="dn">
+                    {{monto['100']}}
+                  </h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h3 class="dn">{{ denom.dosciso }}</h3>
+                </td>
+                <td>
+                  <input [(ngModel)]="unidad.dosciso" type="text" class="form-control" (keyup)="calcular(denom.dosciso, unidad.dosciso)">
+                </td>
+                <td>
+                  <h3 class="dn">
+                    {{monto['200']}}
+                  </h3>
                 </td>
               </tr>
             </tbody>
