@@ -1,0 +1,13 @@
+table,
+thead,
+tr,
+tbody,
+th,
+td {
+  text-align: center;
+}
+
+h3.dn {
+  margin-top: 0;
+  margin-bottom: 0;
+}

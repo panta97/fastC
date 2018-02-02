@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="row">
+
+    <p></p>
+    <h1>Bootstrap Table Panel with Pagination</h1>
+    <p>A simple example of how-to put a bordered table within a panel. Responsive, place holders in header/footer for buttons
+      or pagination.</p>
+    <p>Follow me
+      <a href="https://twitter.com/asked_io" target="_new">@asked_io</a> &
+      <a href="https://asked.io/" target="_new">asked.io</a>.</p>
+    <p> </p>
+    <p> </p>
+
+    <div class="col-md-10 col-md-offset-1">
+
+      <div class="panel panel-default panel-table">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col col-xs-6">
+              <h2 class="panel-title">Cuadre</h2>
+            </div>
+            <div class="col col-xs-6 text-right">
+              <button type="button" class="btn btn-sm btn-primary btn-create">Create New</button>
+            </div>
+          </div>
+        </div>
+        <div class="panel-body">
+          <table class="table table-striped table-bordered table-list">
+            <thead>
+              <tr>
+                <th style="width: 10%">Denominacion</th>
+                <th style="width: 30%; ">Unidad</th>
+                <th>Monto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <h3 class="dn">0.1</h3>
+                </td>
+                <td>
+                  <input [(ngModel)]="centimos" type="text" class="form-control" (keyup)="calcular()">
+                </td>
+                <td>
+                  <h3 class="dn">
+                    {{result}}
+                  </h3>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h3 class="dn">0.1</h3>
+                </td>
+                <td>
+                  <input type="text" class="form-control">
+                </td>
+                <td>...
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
